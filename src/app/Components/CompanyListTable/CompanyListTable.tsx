@@ -21,6 +21,13 @@ const CompanyListTable = () => {
                     </thead>
                     <tbody>
                      <CompanyListTableRow/>
+                     <CompanyListTableRow/>
+                     <CompanyListTableRow/>
+                     <CompanyListTableRow/>
+                     <CompanyListTableRow/>
+                     <CompanyListTableRow/>
+                  
+                    
                     </tbody>
                 </table>
             </div>
