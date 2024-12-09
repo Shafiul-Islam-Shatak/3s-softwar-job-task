@@ -4,32 +4,10 @@ import SearchBar from "./Components/SearchBar/SearchBar";
 import Toolbar from "./Components/Toolbar/Toolbar";
 import SearchAndFilter from "./Components/SearchAndFilter/SearchAndFilter";
 import CompanyListTable from "./Components/CompanyListTable/CompanyListTable";
-import axios from "axios";
-
-
 
 export default function Home() {
-  const token = process.env.NEXT_PUBLIC_TOKEN;
-  console.log(token);
-  
 
-  const fetchData = async () => {
-    try {
-      const response = await axios.get('http://103.129.115.165:5000/api/Company/List', {
-        headers: {
-          'Authorization': `Bearer ${token}` ,
 
-          'accept': '*/*'
-        }
-      });
-  
-      console.log(response.data);
-    } catch (error) {
-      console.log('Error fetching data:', error);
-    }
-  };
-  
-  fetchData();
   
   return (
     <div>
