@@ -5,10 +5,8 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FiBarChart, FiPieChart } from "react-icons/fi";
 import { GoProjectSymlink, GoSidebarCollapse } from "react-icons/go";
 import { useState } from "react";
-import { PiFolder } from "react-icons/pi";
 import { TbShoppingBagCheck } from "react-icons/tb";
-import { RxCross2 } from "react-icons/rx";
-import { BiArrowFromLeft, BiArrowFromRight } from "react-icons/bi";
+import {  BiArrowFromRight } from "react-icons/bi";
 
 
 const Sidebar = () => {
