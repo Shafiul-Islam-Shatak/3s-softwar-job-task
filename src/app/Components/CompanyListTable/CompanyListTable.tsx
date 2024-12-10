@@ -25,7 +25,7 @@ const CompanyListTable: React.FC<TableDataProps> = ({ tableData }) => {
 
     return (
         <div className="">
-            <div className="mt-5 border rounded-md">
+            <div className="mt-5 border overflow-auto rounded-md">
                 <table className="table ">
                     {/* head */}
                     <thead className="bg-gray-100 ">
