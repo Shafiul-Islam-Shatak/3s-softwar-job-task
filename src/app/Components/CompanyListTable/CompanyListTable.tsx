@@ -1,5 +1,6 @@
 import React from "react";
 import CompanyListTableRow from "./CompanyListTableRow";
+import Pagination from "../Pagination/Pagination";
 
 interface TableDataProps {
     tableData: Data;
@@ -41,6 +42,7 @@ const CompanyListTable: React.FC<TableDataProps> = ({ tableData }) => {
                     </tbody>
                 </table>
             </div>
+            <Pagination/>
         </div>
     );
 };
