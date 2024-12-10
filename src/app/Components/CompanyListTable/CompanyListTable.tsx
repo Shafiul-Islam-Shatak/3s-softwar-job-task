@@ -1,16 +1,31 @@
+import React from "react";
 import CompanyListTableRow from "./CompanyListTableRow";
 
+interface TableDataProps {
+    tableData: Data;
+}
 
-const CompanyListTable = () => {
+interface Data {
+    data: Row[];
+}
+
+interface Row {
+    logoThumbnailUrl: string
+    name: string
+    groupName: string
+    vatNumber: string
+    active: boolean
+}
+
+const CompanyListTable: React.FC<TableDataProps> = ({ tableData }) => {
 
     return (
         <div className="">
-         
-            <div className="mt-5 overflow-hidden border rounded-md">
-                <table className="table  border-collapse">
+            <div className="mt-5 border rounded-md">
+                <table className="table ">
                     {/* head */}
                     <thead className="bg-gray-100 ">
-                        <tr className="uppercase" >
+                        <tr className="uppercase">
                             <th>Logo</th>
                             <th>Name</th>
                             <th>Group</th>
@@ -19,15 +34,10 @@ const CompanyListTable = () => {
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody>
-                     <CompanyListTableRow/>
-                     <CompanyListTableRow/>
-                     <CompanyListTableRow/>
-                     <CompanyListTableRow/>
-                     <CompanyListTableRow/>
-                     <CompanyListTableRow/>
-                  
-                    
+                    <tbody className="">
+                        {tableData?.data.map((row, idx) => (
+                            <CompanyListTableRow key={idx} row={row} />
+                        ))}
                     </tbody>
                 </table>
             </div>
