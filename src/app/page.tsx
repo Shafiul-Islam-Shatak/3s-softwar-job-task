@@ -3,17 +3,15 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import SearchBar from "./Components/SearchBar/SearchBar";
 import Toolbar from "./Components/Toolbar/Toolbar";
 import SearchAndFilter from "./Components/SearchAndFilter/SearchAndFilter";
-import CompanyListTable from "./Components/CompanyListTable/CompanyListTable";
 import useCompanyData from "./CustomHooks/useCompanyData";
 import { MoonLoader } from "react-spinners";
-import useCompanyTableData from "./CustomHooks/useCompanyTableData";
+import { FaPlus } from "react-icons/fa6";
+
 
 export default function Home() {
 
   const { isLoading } = useCompanyData()
-  const { data } = useCompanyTableData()
 
-  const tableData = data?.data
 
   if (isLoading) {
     return <div className="flex items-center justify-center h-screen ">
@@ -38,10 +36,10 @@ export default function Home() {
           </div>
 
           {/* list of company */}
-          <div className=" overflow-y-auto">
-            <div className="  flex justify-between overflow-auto">
+          <div className="">
+            <div className="  flex justify-between ">
               <h1 className="font-semibold text-3xl">List of Company</h1>
-              <button className="bg-blue-500 text-white text-lg px-4 py-1 rounded-lg font-semibold"><span className="text-2xl">+</span> Add New</button>
+              <button className="bg-blue-500 h-fit text-white text-lg px-4 py-1 rounded-lg font-semibold flex items-center justify-center"><FaPlus></FaPlus> <h1>Add New</h1></button>
             </div>
 
             {/*Search and filter */}
@@ -49,8 +47,6 @@ export default function Home() {
               <SearchAndFilter />
             </div>
 
-            {/* tabele */}
-            <CompanyListTable tableData={tableData} />
           </div>
         </div>
       </div>

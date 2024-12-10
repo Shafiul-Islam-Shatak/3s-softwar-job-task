@@ -24,9 +24,8 @@ const CompanyListTableRow: React.FC<TableRowProps> = ({ row }) => {
     console.log(row);
 
 
-
     return (
-        <tr>
+        <tr className="font-semibold">
             <td>
                 <div className="flex items-center gap-3">
                     <div className="avatar">

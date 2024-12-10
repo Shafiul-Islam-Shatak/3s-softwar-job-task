@@ -5,7 +5,7 @@ interface VatnumberProps {
 const SearchByVatNumber:React.FC<VatnumberProps> = ({serchVatNumber , setSerchVatNumber}) => {
     return (
         <div>
-            <h1 className="mb-2">Company Name</h1>
+            <h1 className="mb-2">VAT Number</h1>
             <input
                 type="text"
                 value={serchVatNumber}

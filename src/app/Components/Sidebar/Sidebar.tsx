@@ -2,11 +2,19 @@
 
 // react icons
 import { IoIosArrowDown } from "react-icons/io";
-import { FiBarChart, FiPieChart } from "react-icons/fi";
-import { GoProjectSymlink, GoSidebarCollapse } from "react-icons/go";
+import { GoProjectSymlink, GoSidebarCollapse , GoGear  } from "react-icons/go";
 import { useState } from "react";
 import { TbShoppingBagCheck } from "react-icons/tb";
 import {  BiArrowFromRight } from "react-icons/bi";
+import { BsFolder } from "react-icons/bs";
+import { CiGrid31 } from "react-icons/ci";
+import { LuUserCheck } from "react-icons/lu";
+import { RiListSettingsLine } from "react-icons/ri";
+
+
+
+
+
 
 
 const Sidebar = () => {
@@ -15,7 +23,7 @@ const Sidebar = () => {
 
 
     return (
-        <div className="">
+        <div>
 
             <div className="relative ">
                 {/* Toggle Button */}
@@ -37,13 +45,13 @@ const Sidebar = () => {
                                 onClick={() => setIsOpen(!isOpen)} />
                         </div>
                         {/* general section */}
-                        <div className={`mt-6  : "px-[10px]"} transition-all duration-300 ease-in-out`}>
+                        <div className={`mt-6  : "px-[10px]"} transition-all duration-300 ease-in-out  font-semibold`}>
 
                             <div className="mt-3 flex flex-col gap-[5px]">
                                 <div
                                     className={` flex items-center w-full hover:bg-gray-50 p-[5px] rounded-md cursor-pointer transition-all duration-200 relative group`}>
                                     <div className="flex items-center gap-[8px]">
-                                        <TbShoppingBagCheck className="text-[1.3rem] text-gray-500" />
+                                        <BsFolder className="text-[1.3rem] text-gray-500" />
                                         <p className={` text-[1rem] font-[400] text-gray-500`}>Dashboard</p>
                                     </div>
                                 </div>
@@ -61,7 +69,7 @@ const Sidebar = () => {
                                         className={`flex items-center gap-[8px]  w-full`}>
                                         <div className="flex items-center gap-[8px]">
                                             <GoProjectSymlink className="text-[1.3rem] text-gray-500" />
-                                            <p className={`text-[1rem] font-[400] text-gray-500`}>Bussiness Unit</p>
+                                            <p className={`text-[1rem] font-[400] text-blue-500`}>Bussiness Unit</p>
                                         </div>
 
                                         <IoIosArrowDown
@@ -72,7 +80,7 @@ const Sidebar = () => {
                                 {/* active projects dropdown */}
                                 <ul className={`${isDropdownOpen ? "h-auto my-3 opacity-100 z-[1]" : "opacity-0 z-[-1] h-0"}  transition-all duration-300 list-disc marker:text-blue-400 ml-[35px] flex flex-col gap-[3px] text-[1rem] text-gray-500`}>
                                     <li className="hover:bg-gray-50 px-[10px] py-[5px] rounded-md">Goups</li>
-                                    <li className="hover:bg-gray-50 px-[10px] py-[5px] rounded-md">Companies</li>
+                                    <li className="hover:bg-gray-50 px-[10px] py-[5px] text-blue-500 rounded-md">Companies</li>
                                     <li className="hover:bg-gray-50 px-[10px] py-[5px] rounded-md">Brands</li>
                                     <li className="hover:bg-gray-50 px-[10px] py-[5px] rounded-md">Outlets</li>
                                     <li className="hover:bg-gray-50 px-[10px] py-[5px] rounded-md">Warehouses</li>
@@ -82,7 +90,7 @@ const Sidebar = () => {
                                 <div
                                     className={` flex items-center w-full hover:bg-gray-50 p-[5px] rounded-md cursor-pointer transition-all duration-200 relative group`}>
                                     <div className="flex items-center gap-[8px]">
-                                        <FiBarChart className="text-[1.3rem] text-gray-500" />
+                                        <CiGrid31 className="text-[1.3rem] text-gray-500" />
                                         <p className={` text-[1rem] font-[400] text-gray-500`}>Catelog</p>
                                     </div>
 
@@ -91,7 +99,7 @@ const Sidebar = () => {
                                 <div
                                     className={` flex items-center w-full hover:bg-gray-50 p-[5px] rounded-md cursor-pointer transition-all duration-200 relative group`}>
                                     <div className="flex items-center gap-[8px]">
-                                        <FiPieChart className="text-[1.3rem] text-gray-500" />
+                                        <LuUserCheck className="text-[1.3rem] text-gray-500" />
                                         <p className={` text-[1rem] font-[400] text-gray-500`}>User</p>
                                     </div>
 
@@ -100,7 +108,7 @@ const Sidebar = () => {
                                 <div
                                     className={` flex items-center w-full hover:bg-gray-50 p-[5px] rounded-md cursor-pointer transition-all duration-200 relative group`}>
                                     <div className="flex items-center gap-[8px]">
-                                        <FiPieChart className="text-[1.3rem] text-gray-500" />
+                                        <RiListSettingsLine className="text-[1.3rem] text-gray-500" />
                                         <p className={` text-[1rem] font-[400] text-gray-500`}>Configuration</p>
                                     </div>
 
@@ -109,7 +117,7 @@ const Sidebar = () => {
                                 <div
                                     className={` flex items-center w-full hover:bg-gray-50 p-[5px] rounded-md cursor-pointer transition-all duration-200 relative group`}>
                                     <div className="flex items-center gap-[8px]">
-                                        <FiPieChart className="text-[1.3rem] text-gray-500" />
+                                        <GoGear className="text-[1.3rem] text-gray-500" />
                                         <p className={` text-[1rem] font-[400] text-gray-500`}>System</p>
                                     </div>
 

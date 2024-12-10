@@ -7,6 +7,7 @@ interface TableDataProps {
 }
 
 interface Data {
+    map(arg0: (row: any, idx: number) => React.JSX.Element): React.ReactNode;
     data: Row[];
 }
 
@@ -19,6 +20,8 @@ interface Row {
 }
 
 const CompanyListTable: React.FC<TableDataProps> = ({ tableData }) => {
+    console.log(tableData);
+    
 
     return (
         <div className="">
@@ -36,7 +39,7 @@ const CompanyListTable: React.FC<TableDataProps> = ({ tableData }) => {
                         </tr>
                     </thead>
                     <tbody className="">
-                        {tableData?.data.map((row, idx) => (
+                        {tableData?.map((row:any, idx:number) => (
                             <CompanyListTableRow key={idx} row={row} />
                         ))}
                     </tbody>
